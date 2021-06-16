@@ -6,6 +6,7 @@
  */
 package edu.infnet.cotacoes.web;
 
+import edu.infnet.cotacoes.model.Cotacao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,11 @@ public class CotacaoController {
 
     @GetMapping({"/cotacao", "/cotacao.html"})
     public String cotacao(Model model) {
+
+        Cotacao cotacaoForm = new Cotacao();
+
+        model.addAttribute("cotacaoForm", cotacaoForm);
+
         return "cotacao";
     }
 }

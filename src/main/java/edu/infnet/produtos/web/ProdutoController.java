@@ -6,6 +6,7 @@
 package edu.infnet.produtos.web;
 
 import edu.infnet.cotacoes.web.CotacaoController;
+import edu.infnet.produtos.model.Produto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,11 @@ public class ProdutoController {
 
     @GetMapping({"/produto", "/produto.html"})
     public String produto(Model model) {
+
+        Produto prodForm = new Produto();
+
+        model.addAttribute("prodForm", prodForm);
+
         return "produto";
     }
 

@@ -25,7 +25,8 @@ public class Produto {
     @Column(name = "id")
     private Long idProd;
     private String nome;
-    private String foto;
+    private String descricao;
+    private String imagem;
 
     public Produto() {
     }
@@ -59,17 +60,31 @@ public class Produto {
     }
 
     /**
-     * @return the foto
+     * @return the imagem
      */
-    public String getFoto() {
-        return foto;
+    public String getImagem() {
+        return imagem;
     }
 
     /**
-     * @param foto the foto to set
+     * @param imagem the imagem to set
      */
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
+    /**
+     * @return the descricao
+     */
+    public String getDescricao() {
+        return descricao;
+    }
+
+    /**
+     * @param descricao the descricao to set
+     */
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
 }
