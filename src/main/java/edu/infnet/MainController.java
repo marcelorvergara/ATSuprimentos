@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.infnet.cotacoes.web;
+package edu.infnet;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,12 +14,12 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author Marcelo Vergara <http://marcelo-vergara.codes/>
  */
 @Controller
-public class CotacaoController {
+public class MainController {
 
-    private static final Logger log = LoggerFactory.getLogger(CotacaoController.class);
+    @GetMapping("/")
+    public String produto(Model model) {
 
-    @GetMapping({"/cotacao", "/cotacao.html"})
-    public String cotacao(Model model) {
-        return "cotacao";
+        return "index";
+
     }
 }
